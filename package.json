@@ -1,0 +1,21 @@
+{
+  "name": "jspm-typescript-umd-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/app.ts",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ConcurrentHashMap",
+  "license": "MIT",
+  "jspm": {
+    "dependencies": {
+      "angular": "github:angular/bower-angular@^1.5.0"
+    },
+    "devDependencies": {
+      "typescript": "npm:typescript@^1.6.2"
+    }
+  }
+}
