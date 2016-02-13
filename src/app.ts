@@ -1,12 +1,13 @@
-/// <reference path="../typings/angularjs/angular.d.ts" />
+/// <reference path="../typings/browser.d.ts" />
 
 import * as angular from 'angular';
 
-(function(app:angular.IModule) {
+class ExampleController {
+	bootstrapSuccessful: boolean;
+	constructor() {
+		this.bootstrapSuccessful = true;
+	}
 
-	app.controller('exampleController', ['$scope', function($scope) {
-		var vm = this;
-		vm.bootstrapSuccessful = true;
-	}]);
-
-})(angular.module('TypeScriptUMDExample', []));
+}
+angular.module('TypeScriptUMDExample', [])
+	.controller('exampleController', ExampleController);

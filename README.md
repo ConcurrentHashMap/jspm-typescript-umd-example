@@ -15,10 +15,11 @@ node -v
 npm install -g typescript
 ```
 
-Then install jspm using npm.
+Then install jspm and typings using npm.
 
 ```
 npm install -g jspm
+npm install -g typings
 ```
 
 #### Next steps:
@@ -33,7 +34,7 @@ When first using jspm it will ask for creating a config.js that will hold all in
 Simply select "typescript" when asked for the transpiler (if you select "none", the below will still work, but you won't be able to compile TypeScript live inside your browser!).
 
 ```
-tsd install angular
+typings install angular --save --ambient
 ```
 
 will install TypeScript definition files for AngularJS (located in /typings),
@@ -44,18 +45,17 @@ will install TypeScript definition files for AngularJS (located in /typings),
 Now let's get our hands dirty with some code:
 
 ```
-/// <reference path="../typings/angularjs/angular.d.ts" />
+/// <reference path="../typings/browser.d.ts" />
 
-import * as angular from 'angular';
+class ExampleController {
+	bootstrapSuccessful: boolean;
+	constructor() {
+		this.bootstrapSuccessful = true;
+	}
 
-(function(app:angular.IModule) {
-
-	app.controller('exampleController', ['$scope', function($scope) {
-		var vm = this;
-		vm.bootstrapSuccessful = true;
-	}]);
-
-})(angular.module('TypeScriptUMDExample', []));
+}
+angular.module('TypeScriptUMDExample', [])
+	.controller('exampleController', ExampleController);
 ```
 
 What does this do? It tells TypeScript where to locate the type definition files.
