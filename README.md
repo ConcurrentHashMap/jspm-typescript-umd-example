@@ -47,6 +47,8 @@ Now let's get our hands dirty with some code:
 ```
 /// <reference path="../typings/browser.d.ts" />
 
+import * as angular from 'angular';
+
 class ExampleController {
 	bootstrapSuccessful: boolean;
 	constructor() {
