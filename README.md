@@ -2,6 +2,8 @@
 
 > An example for an AngularJS application written in TypeScript using jspm as UMD (SystemJS) module loader.
 
+> The [angular2 branch](https://github.com/ConcurrentHashMap/jspm-typescript-umd-example/tree/angular2) is an example for an Angular2 application using jspm to load angular2 and its dependencies.
+ 
 I created this repository as an example for [my answer on Stack Overflow](http://stackoverflow.com/a/32024545/1993402).
 The intend is to show how really simple and nice TypeScript plays together with UMD modules offered by jspm.
 
