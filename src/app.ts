@@ -1,13 +1,17 @@
-/// <reference path="../typings/browser.d.ts" />
+import 'reflect-metadata';
 
-import * as angular from 'angular';
+import {Component} from 'angular2/core';
+import {bootstrap} from 'angular2/platform/browser';
 
-class ExampleController {
+@Component({
+  selector: 'app',
+  templateUrl: './src/app.html',
+})
+export class AppCmp {
 	bootstrapSuccessful: boolean;
 	constructor() {
 		this.bootstrapSuccessful = true;
 	}
-
 }
-angular.module('TypeScriptUMDExample', [])
-	.controller('exampleController', ExampleController);
+
+bootstrap(AppCmp, []);

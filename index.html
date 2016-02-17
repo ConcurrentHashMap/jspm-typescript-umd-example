@@ -1,4 +1,4 @@
-<html ng-app="TypeScriptUMDExample">
+<html>
 	<head>
 		<script src="jspm_packages/system.js"></script>
 		<script src="config.js"></script>
@@ -7,10 +7,7 @@
 		</script>
 		<link href="style.css" rel="stylesheet" type="text/css" />
 	</head>
-	<body ng-controller="exampleController as vm">
-		<pre>If UMD module could be loaded successfully, there will be a green "SUCCESS" below:</pre>
-		
-		<h3 class="success hide" ng-class="{'show': vm.bootstrapSuccessful}">SUCCESS</h3> 
-		<h3 class="error" ng-class="{'hide': vm.bootstrapSuccessful}">ERROR - SEE IN DEVELOPER TOOLS</h3> 
+	<body>
+		<app>Loading...</app>
 	</body>
 </html>
